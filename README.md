@@ -49,7 +49,7 @@ After the installation is complete launch Visual Studio Code by searching for "V
    Install Git and configure it on your local machine. Create a GitHub account for hosting your repositories. Initialize a Git repository for your project and make your first commit. https://github.com
 Go to the Git for Windows download page and download the installer.
 Open the downloaded .exe file and follow the installation prompts. You can generally accept the default settings , changes can be done later after installation.
-Open Command Prompt (cmd) and type ; git --version  to verify installation and you should see the version number of Git.
+Open Command Prompt (cmd) and type ; git --version  to verify installation and you should see the version number of Git.![alt text](version.png)
 In your terminal, to set your username type;
 git config --global user.name "Your Name"
 In your terminal, to set your email  type;
@@ -58,29 +58,83 @@ To confirm your settings, type;
 git config --list
 Go to GitHub and sign up for an account .
 Verify your email address by clicking the verification link sent to your email.
-Go to create a repository on GitHub you want to create and clone .
+Go to create a repository on GitHub you want to create and clone .![alt text](commit.png)
 Click the green Code button and copy the SSH URL.
 Clone the Repository make the necessary changes and commit
- 
+ ![alt text](commited.png)
 https://github.com/Kubambe/hello-python.git
 
 4. Install Necessary Programming Languages and Runtimes:
-  Instal Python from http://wwww.python.org programming language required for your project and install their respective compilers, interpreters, or runtimes. Ensure you have the necessary tools to build and execute your code.
+  Install Python from http://wwww.python.org programming language required for your project and install their respective compilers, interpreters, or runtimes. Ensure you have the necessary tools to build and execute your code.
+Go to the official Python website http://wwww.python.org
+Navigate to the "Downloads" section and click on the download link to get the latest stable version of Python.
+Locate the downloaded .exe file and double-click it to run the installer.
+Add Python to PATH: On the first screen, check the box that says "Add Python to PATH". This makes it easier to run Python from the command line and click "Install Now" to proceed with the installation.
+Wait for the installation to complete, then click "Close". To ensure that Python has been installed correctly:
+Open Command Prompt and type py --version
+![alt text](python.png)
+![alt text](pythonw.png)
 
 5. Install Package Managers:
    If applicable, install package managers like pip (Python).
-
+Download the get-pip.py script from https://pypi.org/project/pip/
+Run the script:python get-pip.py
+check and verify if installed by typing ;pip --version 
+Another one way to ens0ure pip is installed is to :
+Open VS Code.
+Go to Extensions: Click on the Extensions view icon on the Sidebar (or press Ctrl+Shift+X).
+Search for Python: In the Extensions view search bar, type Python and select the one published by Microsoft.
+Install the Extension: Click the Install button.Open a Project or Create a New Folder: You can open an existing Python project or create a new folder for your project.
+![alt text](pip.png)
 6. Configure a Database (MySQL):
    Download and install MySQL database. https://dev.mysql.com/downloads/windows/installer/5.7.html
+Go to the official MySQL website (https://www.mysql.com/).
+Choose the appropriate version for your operating system.
+Click on the download link for the MySQL installer .
+Locate the downloaded .msi file and double-click it to run the installer.
+Select the setup type (Developer Default, Server Only, etc.). For most users, "Developer Default" is recommended.
+The installer will check for required software. If something is missing, it will prompt you to install it.
+Use the default installation path or specify a custom path.
+Apply Configuration by following the prompts to configure MySQL.
+Choose the configuration type (Standalone, InnoDB Cluster, etc.), select the port number (default is 3306), and configure the root password.
+Check the box to run MySQL as a Windows service and choose whether it should start automatically.
+Click "Execute" to apply the configuration and complete the installation
+log into MySQL:
+mysql -u root -p
+and enter the root password you configured during installation
+![alt text](mysql6.png) ![alt text](mysql.png) ![alt text](mysql2.png) ![alt text](mysql3.png) ![alt text](mysql4.png) ![alt text](mysql5.png)
 
 7. Set Up Development Environments and Virtualization (Optional):
    Consider using virtualization tools like Docker or virtual machines to isolate project dependencies and ensure consistent environments across different machines.
-
+Go to  https://docs.docker.com/desktop/install/windows-install/ and install docker desktop for windows.
+Run the installer and follow the installation wizard steps. After the installation, Docker Desktop will start automatically. 
+To verify the installation open Command Prompt or PowerShell and run the following command to check the Docker version 
+docker --version
+![alt text](docker.png)
 8. Explore Extensions and Plugins:
    Explore available extensions, plugins, and add-ons for your chosen text editor or IDE to enhance functionality, such as syntax highlighting, linting, code formatting, and version control integration.
-
+VS Code has different plugins and extensions and here are some for python;
+For highlighting theres is magic python
+![alt text](highlight.png)
+Pylint- Linting for Python using Pylint ![alt text](linter.png)
+autopep8- Formats Python code to conform to the PEP 8 style guide	![alt text](auto.png)
+Black- A popular Python code formatter ![alt text](formattt.png)
+Git History- Provides a visual representation of Git history ![alt text](githguh.png)
+GitLens- Supercharges the built-in Git capabilities in VS Code
+Python Environment Manager: Manages Python environments within VS Code ![alt text](<python eve.png>)
+By using these extensions, plugins, and add-ons, you can significantly enhance the functionality of your text editor or IDE, making your development workflow more efficient and productive.
+![alt text](extensions.png)
 9. Document Your Setup:
     Create a comprehensive document outlining the steps you've taken to set up your developer environment. Include any configurations, customizations, or troubleshooting steps encountered during the process. 
+After installing and settig up the different required environments some of the troubleshooting steps we should takeare;
+Incase installation fails ensure you have administrative privileges. Run the installer as an administrator. 
+Check if your antivirus or firewall is blocking the installation.
+incase downloads fail make sure you have an active internet connection. Check the output panel in VS Code for specific error message.
+Check compatibility of the downloads you want to include
+Many programs and Windows itself provide log files that can offer clues about what’s going wrong.
+Often, the specific error message or behavior has been encountered by others, and solutions can be found on forums or official support sites.
+Sometimes, simply uninstalling and reinstalling the program can fix issues.
+
 
 #Deliverables:
 - Document detailing the setup process with step-by-step instructions and screenshots where necessary.
